@@ -12,7 +12,6 @@ import {
   CardActions,
   Button,
   TextField,
-  SelectProps,
 } from "@material-ui/core";
 
 import { weakSelectOptions, strongSelectOptions } from "./helpers/selectValue";
@@ -66,9 +65,11 @@ function App() {
             <Typography variant="h6" component="h2">
               Password Length:
             </Typography>
+
             <Select
               native
               value={options.passwordLength}
+              className="flex-basis"
               name="passwordLength"
               onChange={handleChange}
               id="grouped-native-select"
@@ -95,6 +96,7 @@ function App() {
               Include Symbols:
             </Typography>
             <FormControlLabel
+              className="flex-basis"
               control={
                 <Checkbox
                   checked={options.checkedSpecialChar}
@@ -113,6 +115,7 @@ function App() {
             </Typography>
 
             <FormControlLabel
+              className="flex-basis"
               control={
                 <Checkbox
                   checked={options.checkedDigits}
@@ -131,6 +134,7 @@ function App() {
             </Typography>
 
             <FormControlLabel
+              className="flex-basis"
               control={
                 <Checkbox
                   checked={options.checkedLowerCaseChar}
@@ -149,6 +153,7 @@ function App() {
             </Typography>
 
             <FormControlLabel
+              className="flex-basis"
               control={
                 <Checkbox
                   checked={options.checkedUpperCaseChar}

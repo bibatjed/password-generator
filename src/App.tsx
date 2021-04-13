@@ -40,6 +40,21 @@ function App() {
   };
 
   const buttonOnClick = () => {
+    const {
+      checkedDigits,
+      checkedLowerCaseChar,
+      checkedSpecialChar,
+      checkedUpperCaseChar,
+    } = options;
+    if (
+      !checkedDigits &&
+      !checkedLowerCaseChar &&
+      !checkedSpecialChar &&
+      !checkedUpperCaseChar
+    ) {
+      alert("Please select an option at least one");
+      return;
+    }
     setGeneratedPassword(generatePassword(options));
   };
 
